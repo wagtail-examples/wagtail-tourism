@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "wagtail-tourism"
+version = "0.1.0"
+description = "A tourism website made with Wagtail CMS"
+authors = ["nickmoreton <nickmoreton@me.com>"]
+license = "MIT"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+wagtail = "~6.1"
+dj-database-url = "~2.2"
+gunicorn = "~22.0"
+psycopg2 = "~2.9"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "~24.4"
+isort = "~5.13"
+flake8 = "~7.1"
+django-upgrade = "~1.19"
+pyupgrade = "~3.16"
+pre-commit = "~3.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
