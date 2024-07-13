@@ -32,11 +32,5 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-build = "cli.main:build"
-start = "cli.main:start"
-stop = "cli.main:stop"
-restart = "cli.main:restart"
-enter = "cli.main:enter"
-migrate = "cli.main:migrate"
-static = "cli.main:static"
-destroy = "cli.main:destroy"
+dc = "cli.dc:dc" # docker-compose commands
+dj = "cli.dj:dj" # Django commands
