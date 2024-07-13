@@ -4,3 +4,7 @@
 
 
 A wagtail tourism catalogue CMS
+
+## Development
+
+See [development](./docs/setup.md) for setup instructions.
