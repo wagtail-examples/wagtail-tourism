@@ -45,3 +45,9 @@ def static():
     subprocess.run(
         ["docker-compose", "exec", "app", "python", "manage.py", "collectstatic"]
     )
+
+
+@click.command()
+def destroy():
+    subprocess.run(["echo", "Destroying..."])
+    subprocess.run(["docker-compose", "down", "-v"])
