@@ -5,7 +5,10 @@ description = "A tourism website made with Wagtail CMS"
 authors = ["nickmoreton <nickmoreton@me.com>"]
 license = "MIT"
 readme = "README.md"
-package-mode = false
+# package-mode = false
+packages = [
+    { include = "cli" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -13,6 +16,7 @@ wagtail = "~6.1"
 dj-database-url = "~2.2"
 gunicorn = "~22.0"
 psycopg2 = "~2.9"
+click = "^8.1.7"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -27,3 +31,6 @@ pre-commit = "~3.7"
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.poetry.scripts]
+dc = "cli.dc:dc" # docker-compose commands
+dj = "cli.dj:dj" # Django commands
