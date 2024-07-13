@@ -29,7 +29,7 @@ poetry run dc start
 To run migrations, run:
 
 ```bash
-poetry run dc migrate
+poetry run dj migrate
 ```
 
 ## Run the app
