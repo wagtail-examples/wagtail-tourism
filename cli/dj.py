@@ -34,3 +34,21 @@ def static():
             "--noinput",
         ]
     )
+
+
+@dj.command(
+    help="Run the Django development server in the Docker containe. Run 'dc runserver --help' for more information."
+)
+def run():
+    subprocess.run(["echo", "Running the server..."])
+    subprocess.run(
+        [
+            "docker-compose",
+            "exec",
+            "app",
+            "python",
+            "manage.py",
+            "runserver",
+            "0.0.0.0:8000",
+        ]
+    )
